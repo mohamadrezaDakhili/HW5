@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- added css file -->
+    <link rel="stylesheet" href="style.css">
+    <title>HW5</title>
+    <!-- added jquery file in project -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/jalali-moment/dist/jalali-moment.browser.js"></script>
+</head>
+
+<body>
+    <div class="row m-0 justify-content-center">
+        <div class="col-12 row justify-content-center bg-warning">
+            <h1>Task Home Work 5</h1>
+        </div>
+        <div class="col-11 p-4">
+            <!-- quiz one -->
+            <h5>1- a function to validate an E-mail addres </h5>
+            <p>please write E-mail addres</p>
+            <input class="w-25" type="email" id="email" placeholder="Example: mohamadrezadakhili53@gmail.com" value="mohamadrezadakhili53@gmail.com" >
+            <input type="button" value="Validate Email" onclick=" validateEmail(document.getElementById('email').value)">
+            <p id="showValidateEmail" class="text-success mt-3">Email : </p>
+            <hr>
+
+            <!-- quiz Two -->
+            <h5>2- A function to get Diff between two dates object</h5>
+            <p>For example:</p>
+            <p id="oneDate"></p>
+            <p id="twoDate"></p>
+            <button onclick="diffTime()">click me for Conver</button>
+            <p class="mt-3 text-success" id="textDate">Diff between two dates = </p>
+            <hr>
+
+            <!-- quiz three -->
+            <h5>3- Extend above function to get an array (unlimited) of dates and return the diff except gaps between in
+                hours and minutes</h5>
+            <P id="demo"></P>
+            <button onclick="differenceTime()">Show Time difference</button>
+            <P class="mt-3 text-success" id="demo2">Time difference = </P>
+            <hr>
+
+            <!-- quiz four -->
+            <h5>4- a function that convert time into another time zone (by getting date object) </h5>
+            <p id="dateAsia"></p>
+            <button id="convertTime" onclick="convertDate()">Convert USA time</button>
+            <p class="mt-3 text-success" id="dateUSA">USA time: </p>
+            <hr>
+
+            <!-- quiz five -->
+            <h5>5- Function to get a Date object,convert in to jalali Date,and return persian output</h5>
+            <input class="w-25" id="gregorianInput" placeHolder="Example:1989/1/24" value="1994/9/03">
+            <button id="convertToJalali">convert</button>
+            <p class="mt-3 text-success" id="jalaliOutput">تاریخ :</p>
+            <hr>
+
+            <!-- quiz six -->
+            <h5>6- write a javascript program which returns a subset of a string </h5>
+            <input class="w-25" type="text" name="array" id="subsetString" placeholder="please write text">
+            <button onclick="subsetString(document.getElementById('subsetString').value)">click subset string</button>
+            <p class="mt-3 text-success" id="textSubset">Text = </p>
+            <hr>
+
+            <!-- quiz seven -->
+            <h5>7- write a javascript function to convert an object into a list of key value pairs</h5>
+            <p>{country: "Iran",capital: "Tehran",population: "18M"}</p>
+            <button id="btnListArray">Convert list Array</button>
+            <p class="mt-3 text-success" id="textListArray">List Array =</p>
+            <hr>
+
+            <!-- quiz eight -->
+            <h5>8- write a javascript program to sort an array of javascript objects by numeric property(can detect the
+                numerical property)</h5>
+            <p id="arrayList"></p>
+            <button onclick="sortArray()" id="convertArraySort">Sort Array</button>
+            <p class="mt-3 text-success" id="arraySort">Array Sort:</p>
+
+            <!-- quiz nine -->
+            <hr>
+            <h5>9- write a javaScript program to Map a range a specific Range </h5>
+            <p>Range (1~100)</p>
+            <input class="w-25" placeholder="please write number" type="number" name="number" id="numberRange">
+            <button onclick="RangeNumber()">click range (1~5)</button>
+            <p class="mt-3 text-success" id="newNumber">Number =</p>
+
+            <!-- quiz ten -->
+            <hr>
+            <h5>10- write a javascript function to add specific minutes to a date object</h5>
+            <p id="dateTehran"></p>
+            <button onclick="changeTime()">change Time</button>
+            <p class="mt-3 text-success" id="newTime">New Time :</p>
+        </div>
+    </div>
+</body>
+
+<!-- added js file -->
+<script src="script.js">
+
+</script>
+
+</html>
