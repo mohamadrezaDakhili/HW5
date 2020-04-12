@@ -3,8 +3,7 @@ let txtValidateEmail = document.getElementById("showValidateEmail");
 function validateEmail(email) {
   let re = /\S+@\S+\.\S+/;
   if (re.test(email) == true) {
-    txtValidateEmail.innerHTML =
-      "Email : " + " " + email + " is Validate :)";
+    txtValidateEmail.innerHTML = "Email : " + " " + email + " is Validate :)";
   } else {
     let str = "Email : " + " " + email + " is Not Validate :(";
     let result = str.fontcolor("red");
@@ -40,5 +39,24 @@ var mobileReg = /(0|\+98)?([ ]|-|[()]){0,2}9[1|2|3|4]([ ]|-|[()]){0,2}(?:[0-9]([
       arr[index] = value.replace(junkReg, "");
       arr[index][0] === "0" || (arr[index] = "0" + arr[index]);
     });
-    txtValidatePhone.innerHTML ="Phone Number : " + mobiles;
+    txtValidatePhone.innerHTML = "Phone Number : " + mobiles;
   };
+
+// Answer three
+let userName = document.getElementById("txtUserName");
+function validateUser(strUser) {
+  let substring = strUser.includes(".");
+  let substr = strUser.includes("_");
+  if (
+    strUser.length < 3 ||
+    strUser.length > 9 ||
+    substring == false ||
+    substr == false
+  ) {
+    let str = "User Name : is Not Validate :("
+    let result = str.fontcolor("red")
+    userName.innerHTML = result;
+  } else {
+    userName.innerHTML = "User Name : " + strUser + " is validate :)";
+  }
+}

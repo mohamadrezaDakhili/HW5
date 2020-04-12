@@ -25,8 +25,9 @@
             <!-- quiz one -->
             <h5>1- a function to validate an E-mail addres </h5>
             <p>please write E-mail addres</p>
-            <input class="w-25" type="email" id="email" placeholder="Example: mohamadrezadakhili53@gmail.com" >
-            <input type="button" value="Validate Email" onclick=" validateEmail(document.getElementById('email').value)">
+            <input class="w-25" type="email" id="email" placeholder="Example: mohamadrezadakhili53@gmail.com">
+            <input type="button" value="Validate Email"
+                onclick=" validateEmail(document.getElementById('email').value)">
             <p id="showValidateEmail" class="text-success mt-3">Email : </p>
             <hr>
 
@@ -40,9 +41,10 @@
 
             <!-- quiz three -->
             <h5>3- a function to validate username that have only "."and "_" characters and with length of 3~9</h5>
-            <P id="demo"></P>
-            <button onclick="differenceTime()">Show Time difference</button>
-            <P class="mt-3 text-success" id="demo2">Time difference = </P>
+            <p>Example: mohamad_.</p>
+            <input class="w-25" type="text" id="inputUser">
+            <input type="button" value="Validate Number" onclick="validateUser(document.getElementById('inputUser').value)">
+            <p id="txtUserName" class="text-success mt-3">User Name : </p>
             <hr>
 
             <!-- quiz four -->
