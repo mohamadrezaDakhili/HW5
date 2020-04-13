@@ -12,35 +12,17 @@ function validateEmail(email) {
 }
 
 // Answer Two
-let txtValidatePhone = document.getElementById("showValidatePhone");
-var mobileReg = /(0|\+98)?([ ]|-|[()]){0,2}9[1|2|3|4]([ ]|-|[()]){0,2}(?:[0-9]([ ]|-|[()]){0,2}){8}/gi,
-  junkReg = /[^\d]/gi,
-  persinNum = [
-    /۰/gi,
-    /۱/gi,
-    /۲/gi,
-    /۳/gi,
-    /۴/gi,
-    /۵/gi,
-    /۶/gi,
-    /۷/gi,
-    /۸/gi,
-    /۹/gi,
-  ],
-  num2en = function (str) {
-    for (var i = 0; i < 10; i++) {
-      str = str.replace(persinNum[i], i);
-    }
-    return str;
-  },
-  getMobiles = function (str) {
-    var mobiles = num2en(str + "").match(mobileReg) || [];
-    mobiles.forEach(function (value, index, arr) {
-      arr[index] = value.replace(junkReg, "");
-      arr[index][0] === "0" || (arr[index] = "0" + arr[index]);
-    });
-    txtValidatePhone.innerHTML = "Phone Number : " + mobiles;
-  };
+let phoneNumber = document.getElementById("txtPhoneNumber");
+function checkPhone(strPhone) {
+  var res = strPhone.slice(0, 2);
+  if (strPhone.length == 11 && res == "09") {
+    phoneNumber.innerHTML = "Phone Number : " + strPhone + "is Validate :)";
+  } else {
+    let str = "Phone Number : " + strPhone + " is Not Validate :(";
+    let result = str.fontcolor("red");
+    phoneNumber.innerHTML = result;
+  }
+}
 
 // Answer three
 let userName = document.getElementById("txtUserName");
@@ -53,10 +35,47 @@ function validateUser(strUser) {
     substring == false ||
     substr == false
   ) {
-    let str = "User Name : is Not Validate :("
-    let result = str.fontcolor("red")
+    let str = "User Name : is Not Validate :(";
+    let result = str.fontcolor("red");
     userName.innerHTML = result;
   } else {
     userName.innerHTML = "User Name : " + strUser + " is validate :)";
   }
 }
+
+// Answer four
+let txtSearch = document.getElementById("txtSearch");
+let txtError = document.getElementById("txtError");
+let inputSearch = document.getElementById("inputSearch");
+const fileUrl =
+  "https://raw.githubusercontent.com/jeanphorn/wordlist/master/usernames.txt"; // provide file location
+
+function getText(string) {
+  if (inputSearch.value == 0) {
+    txtSearch.innerHTML = "please write username in box search";
+  } else {
+    fetch(fileUrl)
+      .then(function (response) {
+        if (response.ok) {
+          return response.text();
+        } else {
+          throw Error(response.status);
+        }
+      })
+
+      .catch((error) => (txtError.innerHTML = +error))
+
+      .then(function (data) {
+        let search = data.search(string);
+        if (search == -1) {
+          let str = "Result : This name does not exist :(";
+          let result = str.fontcolor("red");
+          txtSearch.innerHTML = result;
+        } else {
+          txtSearch.innerHTML = "Result : This name exist :)";
+        }
+      });
+  }
+}
+
+//Answer Five

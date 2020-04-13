@@ -33,29 +33,37 @@
 
             <!-- quiz Two -->
             <h5>1- a function to validate a phone number (Iranian) </h5>
-            <p>Example: jafang 0 91 2 (123) 45-67 jafang or +۹۸ (۹۱۵) ۸۰ ۸۰ ۸۸۸</p>
-            <input class="w-25" type="text" id="number">
-            <input type="button" value="Validate Number" onclick="getMobiles(document.getElementById('number').value)">
-            <p id="showValidatePhone" class="text-success mt-3">Phone Number : </p>
+            <p>Example: 09384010471</p>
+            <input class="w-25" type="number" id="number">
+            <input type="button" value="Validate Number" onclick="checkPhone(document.getElementById('number').value)">
+            <p id="txtPhoneNumber" class="text-success mt-3">Phone Number : </p>
             <hr>
 
             <!-- quiz three -->
             <h5>3- a function to validate username that have only "."and "_" characters and with length of 3~9</h5>
             <p>Example: mohamad_.</p>
-            <input class="w-25" type="text" id="inputUser">
-            <input type="button" value="Validate Number" onclick="validateUser(document.getElementById('inputUser').value)">
+            <input class="w-25" type="text" id="inputUser" placeHolder="User name">
+            <input type="button" value="Validate Username"
+                onclick="validateUser(document.getElementById('inputUser').value)">
             <p id="txtUserName" class="text-success mt-3">User Name : </p>
             <hr>
 
             <!-- quiz four -->
-            <h5>4- a function that convert time into another time zone (by getting date object) </h5>
-            <p id="dateAsia"></p>
-            <button id="convertTime" onclick="convertDate()">Convert USA time</button>
-            <p class="mt-3 text-success" id="dateUSA">USA time: </p>
+            <h5>4- a function to check that (Q.3) username that not taken by anybody in this list (username is unique
+                and write efficient
+                function to search) </h5>
+
+            <p>please write Username and click button for search inside txt file</p>
+            <input class="w-25" type="text" id="inputSearch" placeHolder="Search">
+            <input type="button" value="Search"
+                onclick="getText(document.getElementById('inputSearch').value)">
+            <p id="txtSearch" class="text-success mt-3">Result : </p>
+            <p>If the txt file is not detected, an error number is displayed.  You can change the txt file URL inside script.js for the test ;)</p>
+            <p id="txtError" class=" text-danger mt-3">Error : </p>
             <hr>
 
             <!-- quiz five -->
-            <h5>5- Function to get a Date object,convert in to jalali Date,and return persian output</h5>
+            <h5>5- a function to generate random unique numbers between 1000 ~ 59999</h5>
             <input class="w-25" id="gregorianInput" placeHolder="Example:1989/1/24" value="1994/9/03">
             <button id="convertToJalali">convert</button>
             <p class="mt-3 text-success" id="jalaliOutput">تاریخ :</p>
