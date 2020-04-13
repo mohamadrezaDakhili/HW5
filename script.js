@@ -79,3 +79,15 @@ function getText(string) {
 }
 
 //Answer Five
+let numberRandom = document.getElementById("txtNumberRandom");
+let necimalNumberRandom = document.getElementById("txtDecimalNumberRandom");
+
+function randomNumber() {
+  let start = 1000;
+  let end = 59999;
+  let number = end - start;
+  numberRandom.innerHTML = start + Math.floor(Math.random() * number);
+  necimalNumberRandom.innerHTML =
+    start + Math.random() * number;
+}
+
