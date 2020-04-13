@@ -94,23 +94,16 @@
             <h5>8- Write a javaScript function to shuffle an Array by index.</h5>
 
             <p id="test">Array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</p>
-            <p>refresh page , change Array Shuffle</p>
+            <p>prease refresh page for change Array Shuffle</p>
             <p class="mt-3 text-success" id="arrayShuffle"></p>
             <hr>
 
             <!-- quiz nine -->
-            <h5>9- write a javaScript program to Map a range a specific Range </h5>
-            <p>Range (1~100)</p>
-            <input class="w-25" placeholder="please write number" type="number" name="number" id="numberRange">
-            <button onclick="RangeNumber()">click range (1~5)</button>
-            <p class="mt-3 text-success" id="newNumber">Number =</p>
+            <h5>9- Write a javaScript function to convert a Gregorian date into jalalian date</h5>
+            <input class="w-25" placeholder="please write Date 0000/00/00" type="text" name="number" id="date" value="2020/02/02">
+            <button onclick="quizNine.jalali(document.getElementById('date').value)">convert</button>
+            <p class="mt-3 text-success" id="changeDate">تاریخ = </p>
 
-            <!-- quiz ten -->
-            <hr>
-            <h5>10- write a javascript function to add specific minutes to a date object</h5>
-            <p id="dateTehran"></p>
-            <button onclick="changeTime()">change Time</button>
-            <p class="mt-3 text-success" id="newTime">New Time :</p>
         </div>
     </div>
 </body>
