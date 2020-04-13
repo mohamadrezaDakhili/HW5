@@ -83,20 +83,22 @@
             <!-- quiz seven -->
             <h5>7- a function to Map range dynamically (with error handling; like not in range..)</h5>
             <p>mapRange(Range1,Range2, a number in Range1)</p>
-            <p>mapRange([1,80],[30,99.5],3)</p>
-            <button id="btnListArray">Convert list Array</button>
-            <p class="mt-3 text-success" id="textListArray">List Array =</p>
+            <p>Base Range = [1,80] =========> you can change value in the homeWork5.html file in line 89 </p>
+            <p>Target Range = [30,99.5] =========> you can change value in the homeWork5.html file in line 89 </p>
+            <input class="w-25" placeholder="please write a number in Range1" type="number" name="number" id="numberRange">
+            <button id="changeRange" onclick="mapRange((baseRange = [1, 80]), (target = [1, 99.5]), document.getElementById('numberRange').value);">Range Target</button>
+            <p class="mt-3 text-success">Range Target =<span id="txtRange"> </span> </p>
             <hr>
 
             <!-- quiz eight -->
-            <h5>8- write a javascript program to sort an array of javascript objects by numeric property(can detect the
-                numerical property)</h5>
-            <p id="arrayList"></p>
-            <button onclick="sortArray()" id="convertArraySort">Sort Array</button>
-            <p class="mt-3 text-success" id="arraySort">Array Sort:</p>
+            <h5>8- Write a javaScript function to shuffle an Array by index.</h5>
+
+            <p id="test">Array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</p>
+            <p>refresh page , change Array Shuffle</p>
+            <p class="mt-3 text-success" id="arrayShuffle"></p>
+            <hr>
 
             <!-- quiz nine -->
-            <hr>
             <h5>9- write a javaScript program to Map a range a specific Range </h5>
             <p>Range (1~100)</p>
             <input class="w-25" placeholder="please write number" type="number" name="number" id="numberRange">

@@ -114,3 +114,31 @@ function converObj() {
   txtObject.innerHTML = JSON.stringify(result);
 }
 
+ //Answer Seven
+ let txtRange = document.getElementById("txtRange");
+function mapRange(baseRange=[a,b] , targetRange=[a,b] , num) {
+  if (num > baseRange[1] || num < targetRange[0]){
+    txtRange.innerHTML = "please change number"
+  }else{
+    let t , aOne , aTwo , bOne , bTwo;
+    aOne = baseRange[0];
+    aTwo = baseRange[1];
+    bOne = targetRange[0]
+    bTwo = targetRange[1];
+    t = bOne - 1 + ((num - aOne + 1) * (bTwo - bOne + 1)) / (aTwo - aOne + 1);
+    txtRange.innerHTML = t
+  }
+}
+
+//Answer Eight
+let txtArray = document.getElementById("arrayShuffle");
+let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+
+  txtArray.innerHTML ="Array Shuffle = " + "["+array+"]";
+}
+shuffleArray(arr);
