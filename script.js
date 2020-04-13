@@ -91,3 +91,26 @@ function randomNumber() {
     start + Math.random() * number;
 }
 
+//Answer six
+let txtObject = document.getElementById("txtObject");
+let array = [
+  { key: "a", value: "b" },
+  { key: "c", value: "d" },
+  { key: "e", value: "f" },
+];
+
+//conver map
+// let mapped = array.map((item) => ({ [item.key]: item.value }));
+// let newObj = Object.assign({}, ...mapped);
+// console.log(newObj);
+
+//convert for
+function converObj() {
+  let result = {};
+  for (let i = 0; i < array.length; i++) {
+    result[array[i].key] = array[i].value;
+  }
+  console.log(result)
+  txtObject.innerHTML = JSON.stringify(result);
+}
+
